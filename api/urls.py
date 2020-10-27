@@ -17,12 +17,22 @@ from django.contrib import admin
 from django.urls import path,include
 from proapi import views
 from rest_framework import routers
+
+
 a=routers.DefaultRouter()
 a.register('',views.student_list1)
+
+b=routers.DefaultRouter()
+b.register('',views.doctorjson)
+
+c=routers.DefaultRouter()
+c.register('',views.user_json)
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('',views.index,name='index'),
     path('studentjson/',views.student_list.as_view(),name='studentjson'),
     path('student/',include(a.urls)),
+    path('doctor/',include(b.urls)),
+    path('user/',include(c.urls)),
 ]
