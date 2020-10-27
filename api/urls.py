@@ -20,4 +20,5 @@ from proapi import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('',views.index,name='index'),
+    path('studentjson/',views.student_list.as_view(),name='studentjson'),
 ]
