@@ -35,4 +35,5 @@ urlpatterns = [
     path('student/',include(a.urls)),
     path('doctor/',include(b.urls)),
     path('user/',include(c.urls)),
+    path('data/',views.getdata),
 ]

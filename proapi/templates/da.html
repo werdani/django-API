@@ -1,0 +1,28 @@
+<mark>hello werdani and welcom :)</mark> 
+
+<table  class="table" border="1px">
+    <tr>
+        <td>id</td>
+        <td>fname</td>
+        <td>lname</td>
+        <td>age</td>
+        <td>data</td>
+        <td>department</td>
+    </tr>
+    {% for i in doc %}
+    <tr>
+        <td>{{i.id}}</td>
+        <td>{{i.fname}}</td>
+        <td>{{i.lname}}</td>
+        <td>{{i.age}}</td>
+        <td>{{i.date_re}}</td>
+        <td>{{i.department}}</td>
+
+
+    </tr>
+
+
+    {% endfor %}
+
+
+</table>

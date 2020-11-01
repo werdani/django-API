@@ -5,6 +5,7 @@ from rest_framework.views import APIView
 from .models import student , doctor
 from django.contrib.auth.models import User 
 from rest_framework import viewsets
+import requests 
 # Create your views here.
 
 
@@ -36,3 +37,11 @@ class user_json(viewsets.ModelViewSet):
 
 def index(request):
     return render(request,'main.html',{'key':'hello werdani and welcom'})
+
+
+
+def getdata(request):
+    addres='http://ammarwerdani.pythonanywhere.com/doctor/'
+    dataa=requests.get(addres).json()
+    print(dataa)
+    return render (request,'da.html',{'doc':dataa})
